@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FBType Name="fileFinder" Comment="Example for a Simple Function Block Type">
+	<Identification Standard="61499-1">
+	</Identification>
+	<VersionInfo Version="1.0" Author="user" Date="2025-07-04">
+	</VersionInfo>
+	<InterfaceList>
+		<EventInputs>
+			<Event Name="REQ" Type="Event" Comment="Normal Execution Request">
+			</Event>
+		</EventInputs>
+		<EventOutputs>
+			<Event Name="CNF" Type="Event" Comment="Execution Confirmation">
+				<With Var="TR"/>
+				<With Var="Out"/>
+				<With Var="LC"/>
+				<With Var="LF"/>
+			</Event>
+		</EventOutputs>
+		<InputVars>
+			<VarDeclaration Name="DP" Type="STRING" Comment=""/>
+			<VarDeclaration Name="FE" Type="STRING" Comment=""/>
+		</InputVars>
+		<OutputVars>
+			<VarDeclaration Name="LF" Type="STRING" Comment=""/>
+			<VarDeclaration Name="Out" Type="INT" Comment=""/>
+			<VarDeclaration Name="LC" Type="DT" Comment=""/>
+			<VarDeclaration Name="TR" Type="BOOL" Comment="Output"/>
+		</OutputVars>
+	</InterfaceList>
+	<SimpleFB>
+		<Algorithm Name="REQ" Comment="Executed algorithm">
+			<ST><![CDATA[]]></ST>
+		</Algorithm>
+	</SimpleFB>
+</FBType>
